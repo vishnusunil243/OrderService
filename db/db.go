@@ -16,6 +16,7 @@ func InitDB(connectTo string) (*gorm.DB, error) {
 	}
 	db.AutoMigrate(&entities.Order{})
 	db.AutoMigrate(&entities.OrderItems{})
+	db.AutoMigrate(&entities.OrderStatus{})
 	return db, err
 
 }
